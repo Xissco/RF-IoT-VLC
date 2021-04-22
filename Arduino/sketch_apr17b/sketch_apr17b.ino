@@ -22,7 +22,8 @@ const char* topicToPublish_ATTRIBUTES = "v1/devices/me/attributes"; // Topic add
 // Data variables
 int cont = 0;
 int termino = 1;
-char JSON_Data[100]; // Used to store the generated data in JSON
+char JSON_Data_Tx[100]; // Used to store the generated data in JSON
+char JSON_Data_Rx[100]; 
 
 unsigned long previousMillis = 0; // Last time updated
 long interval = 1*1000;            // Interval at which to publish data (60 sec)
@@ -52,6 +53,8 @@ void setup()
   Serial.print("Conexion Ethernet exitosa, Direccion IP: ");
   Serial.println(Ethernet.localIP());
   mqttClient.setServer(server, port); // Configure the server adress and port.
+  mqttClient.setCallback(on_message);
+  mqttClient.subscribe("v1/devices/me/rpc/response/+");
 }
 
 void loop() 
@@ -114,6 +117,7 @@ void reconnect() {
   {
     if (mqttClient.connect(client_id, username, NULL)) 
     {
+      mqttClient.subscribe("v1/devices/me/rpc/response/+");
       workflow(); // publish data, once connected
     } 
     else 
@@ -129,22 +133,53 @@ void workflow(void)
   if (cont == 100 or cont == 0) termino = termino * -1;
   Serial.println(cont);
   send_data();         // Publish data to ThingsBoard
+  recive_data();
 }
 
 void send_data(void)
 {
-  create_JSON_Data(); // Set up the data to be published
-  mqttClient.publish(topicToPublish_DATA, JSON_Data); // Publish JSON data to ThingsBoard
+  create_JSON_Data_Tx(); // Set up the data to be published
+  mqttClient.publish(topicToPublish_ATTRIBUTES, JSON_Data_Tx); // Publish JSON data to ThingsBoard
 }
 
-void create_JSON_Data(void)
+void recive_data(void)
+{
+  create_JSON_Data_Rx(); // Set up the data to be published
+  mqttClient.publish("v1/devices/me/rpc/request/1",JSON_Data_Rx);
+}
+
+void create_JSON_Data_Tx(void)
 {
   StaticJsonBuffer<200> JSON_Buffer; // Allocate JSON buffer with 200-byte pool
   JsonObject& JSON_Object = JSON_Buffer.createObject(); // Create JSON object (i.e. document)
   
   // Now populate the JSON document with data
-  JSON_Object["Contador"] = cont; // Create JSON object named "Temperature", assigned with our temperature data
+  JSON_Object["state"] = cont; // Create JSON object named "Temperature", assigned with our temperature data
   JSON_Object["Humedad"] = 90;
   
-  JSON_Object.printTo(JSON_Data); // Store the data on global variable
+  JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
+}
+
+void create_JSON_Data_Rx(void)
+{
+  StaticJsonBuffer<200> JSON_Buffer; // Allocate JSON buffer with 200-byte pool
+  JsonObject& JSON_Object = JSON_Buffer.createObject(); // Create JSON object (i.e. document)
+  
+  // Now populate the JSON document with data
+  JSON_Object["method"] = "getState"; // Create JSON object named "Temperature", assigned with our temperature data
+  JSON_Object["params"] = "";
+  
+  JSON_Object.printTo(JSON_Data_Rx); // Store the data on global variable
+}
+
+void on_message(const char* topic, byte* payload, unsigned int length) {
+
+  //Serial.println("On message");
+
+  char json[length + 1];
+  strncpy (json, (char*)payload, length);
+  json[length] = '\0';
+
+  Serial.print("Message: ");
+  Serial.println(json);
 }
