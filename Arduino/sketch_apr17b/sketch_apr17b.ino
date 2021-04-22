@@ -1,16 +1,16 @@
 #include <SPI.h>
 #include <Ethernet.h>
-#include <ThingsBoard.h>
-
-#define COUNT_OF(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
+#include <PubSubClient.h>   
+#include <ArduinoJson.h>     
 
 EthernetClient ethernetClient;
-ThingsBoard tb(ethernetClient);
+PubSubClient mqttClient(ethernetClient);
 
 byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02};
 
 // ****************************** ThingsBoard login details ******************************
 const char* server = "172.16.1.254";           // MQTT Broker (i.e. server)
+const int port = 1883;                         // Default MQTT port
  
 const char* client_id = "Infraestructura 1";   // Can be anything
 const char* username =  "kuswzx9USm0ufFMXBMSm";   // Authentication token here
@@ -20,28 +20,10 @@ const char* topicToPublish_ATTRIBUTES = "v1/devices/me/attributes"; // Topic add
 // ****************************************************************************************
 
 // Data variables
-int led_delay;
 int cont = 0;
-bool emergencyFlag = false;
-
-RPC_Response processDelayChange(const RPC_Data &data)
-{
-  led_delay = data;
-  Serial.println(led_delay);
-  return RPC_Response(NULL, true);
-}
-
-RPC_Response processGetDelay(const RPC_Data &data)
-{
-  Serial.println("Received the get value method");
-
-  return RPC_Response(NULL, led_delay);
-}
-
-RPC_Callback callbacks[] = 
-{
-  { "getState",         processDelayChange },
-};
+int termino = 1;
+char JSON_Data_Tx[100]; // Used to store the generated data in JSON
+char JSON_Data_Rx[100]; 
 
 unsigned long previousMillis = 0; // Last time updated
 long interval = 1*1000;            // Interval at which to publish data (60 sec)
@@ -70,21 +52,28 @@ void setup()
   }
   Serial.print("Conexion Ethernet exitosa, Direccion IP: ");
   Serial.println(Ethernet.localIP());
-
+  mqttClient.setServer(server, port); // Configure the server adress and port.
+  mqttClient.setCallback(on_message);
+  mqttClient.subscribe("v1/devices/me/rpc/response/+");
 }
 
 void loop() 
 {
   unsigned long currentMillis = millis(); // Store the time since the board started
   renovarDHCP();
-  reconnect();
+  // If not connected to MQTT, we will reconnect.
+  if (!mqttClient.connected())
+  { 
+    reconnect();
+  }
+  
   if(currentMillis - previousMillis > interval) 
   {
     previousMillis = currentMillis; // reset the previous millis, so that it will continue to publish data.
     workflow(); // Workflow to use data
   }
 
-  tb.loop(); // Called to maintain connection to server
+  mqttClient.loop(); // Called to maintain connection to server
 }
 
 void renovarDHCP()
@@ -122,29 +111,75 @@ void renovarDHCP()
   }  
 }
 
-void reconnect()
-{
-  if (!tb.connected()) 
+void reconnect() {
+  // Loop until we're reconnected
+  while (!mqttClient.connected()) 
   {
-    while (!tb.connect(server, username)) 
+    if (mqttClient.connect(client_id, username, NULL)) 
     {
-      Serial.println("Failed to connect");
-      delay(5000);
-    }
-    while (!tb.RPC_Subscribe(callbacks, COUNT_OF(callbacks))) 
+      mqttClient.subscribe("v1/devices/me/rpc/response/+");
+      workflow(); // publish data, once connected
+    } 
+    else 
     {
-      Serial.println("Failed to subscribe for RPC");
-      delay(5000);
+      delay(5000);  // Wait 5 seconds before retrying
     }
   }
 }
 
-void workflow()
+void workflow(void)
 {
-  cont++;
+  cont = cont + termino;
+  if (cont == 100 or cont == 0) termino = termino * -1;
   Serial.println(cont);
-  tb.sendAttributeInt("cont", cont);
-  if(emergencyFlag) tb.sendAttributeBool("state", emergencyFlag);
-  else tb.sendAttributeBool("state", emergencyFlag);
-  if (cont==100) {cont = 0;}  
+  send_data();         // Publish data to ThingsBoard
+  recive_data();
+}
+
+void send_data(void)
+{
+  create_JSON_Data_Tx(); // Set up the data to be published
+  mqttClient.publish(topicToPublish_ATTRIBUTES, JSON_Data_Tx); // Publish JSON data to ThingsBoard
+}
+
+void recive_data(void)
+{
+  create_JSON_Data_Rx(); // Set up the data to be published
+  mqttClient.publish("v1/devices/me/rpc/request/1",JSON_Data_Rx);
+}
+
+void create_JSON_Data_Tx(void)
+{
+  StaticJsonBuffer<200> JSON_Buffer; // Allocate JSON buffer with 200-byte pool
+  JsonObject& JSON_Object = JSON_Buffer.createObject(); // Create JSON object (i.e. document)
+  
+  // Now populate the JSON document with data
+  JSON_Object["state"] = cont; // Create JSON object named "Temperature", assigned with our temperature data
+  JSON_Object["Humedad"] = 90;
+  
+  JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
+}
+
+void create_JSON_Data_Rx(void)
+{
+  StaticJsonBuffer<200> JSON_Buffer; // Allocate JSON buffer with 200-byte pool
+  JsonObject& JSON_Object = JSON_Buffer.createObject(); // Create JSON object (i.e. document)
+  
+  // Now populate the JSON document with data
+  JSON_Object["method"] = "getState"; // Create JSON object named "Temperature", assigned with our temperature data
+  JSON_Object["params"] = "";
+  
+  JSON_Object.printTo(JSON_Data_Rx); // Store the data on global variable
+}
+
+void on_message(const char* topic, byte* payload, unsigned int length) {
+
+  //Serial.println("On message");
+
+  char json[length + 1];
+  strncpy (json, (char*)payload, length);
+  json[length] = '\0';
+
+  Serial.print("Message: ");
+  Serial.println(json);
 }
