@@ -1,16 +1,16 @@
 #include <SPI.h>
 #include <Ethernet.h>
-#include <PubSubClient.h>   
-#include <ArduinoJson.h>     
+#include <ThingsBoard.h>
+
+#define COUNT_OF(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
 
 EthernetClient ethernetClient;
-PubSubClient mqttClient(ethernetClient);
+ThingsBoard tb(ethernetClient);
 
 byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02};
 
 // ****************************** ThingsBoard login details ******************************
 const char* server = "172.16.1.254";           // MQTT Broker (i.e. server)
-const int port = 1883;                         // Default MQTT port
  
 const char* client_id = "Infraestructura 1";   // Can be anything
 const char* username =  "kuswzx9USm0ufFMXBMSm";   // Authentication token here
@@ -20,9 +20,28 @@ const char* topicToPublish_ATTRIBUTES = "v1/devices/me/attributes"; // Topic add
 // ****************************************************************************************
 
 // Data variables
+int led_delay;
 int cont = 0;
-int termino = 1;
-char JSON_Data[100]; // Used to store the generated data in JSON
+bool emergencyFlag = false;
+
+RPC_Response processDelayChange(const RPC_Data &data)
+{
+  led_delay = data;
+  Serial.println(led_delay);
+  return RPC_Response(NULL, true);
+}
+
+RPC_Response processGetDelay(const RPC_Data &data)
+{
+  Serial.println("Received the get value method");
+
+  return RPC_Response(NULL, led_delay);
+}
+
+RPC_Callback callbacks[] = 
+{
+  { "getState",         processDelayChange },
+};
 
 unsigned long previousMillis = 0; // Last time updated
 long interval = 1*1000;            // Interval at which to publish data (60 sec)
@@ -51,26 +70,21 @@ void setup()
   }
   Serial.print("Conexion Ethernet exitosa, Direccion IP: ");
   Serial.println(Ethernet.localIP());
-  mqttClient.setServer(server, port); // Configure the server adress and port.
+
 }
 
 void loop() 
 {
   unsigned long currentMillis = millis(); // Store the time since the board started
   renovarDHCP();
-  // If not connected to MQTT, we will reconnect.
-  if (!mqttClient.connected())
-  { 
-    reconnect();
-  }
-  
+  reconnect();
   if(currentMillis - previousMillis > interval) 
   {
     previousMillis = currentMillis; // reset the previous millis, so that it will continue to publish data.
     workflow(); // Workflow to use data
   }
 
-  mqttClient.loop(); // Called to maintain connection to server
+  tb.loop(); // Called to maintain connection to server
 }
 
 void renovarDHCP()
@@ -108,43 +122,29 @@ void renovarDHCP()
   }  
 }
 
-void reconnect() {
-  // Loop until we're reconnected
-  while (!mqttClient.connected()) 
+void reconnect()
+{
+  if (!tb.connected()) 
   {
-    if (mqttClient.connect(client_id, username, NULL)) 
+    while (!tb.connect(server, username)) 
     {
-      workflow(); // publish data, once connected
-    } 
-    else 
+      Serial.println("Failed to connect");
+      delay(5000);
+    }
+    while (!tb.RPC_Subscribe(callbacks, COUNT_OF(callbacks))) 
     {
-      delay(5000);  // Wait 5 seconds before retrying
+      Serial.println("Failed to subscribe for RPC");
+      delay(5000);
     }
   }
 }
 
-void workflow(void)
+void workflow()
 {
-  cont = cont + termino;
-  if (cont == 100 or cont == 0) termino = termino * -1;
+  cont++;
   Serial.println(cont);
-  send_data();         // Publish data to ThingsBoard
-}
-
-void send_data(void)
-{
-  create_JSON_Data(); // Set up the data to be published
-  mqttClient.publish(topicToPublish_DATA, JSON_Data); // Publish JSON data to ThingsBoard
-}
-
-void create_JSON_Data(void)
-{
-  StaticJsonBuffer<200> JSON_Buffer; // Allocate JSON buffer with 200-byte pool
-  JsonObject& JSON_Object = JSON_Buffer.createObject(); // Create JSON object (i.e. document)
-  
-  // Now populate the JSON document with data
-  JSON_Object["Contador"] = cont; // Create JSON object named "Temperature", assigned with our temperature data
-  JSON_Object["Humedad"] = 90;
-  
-  JSON_Object.printTo(JSON_Data); // Store the data on global variable
+  tb.sendAttributeInt("cont", cont);
+  if(emergencyFlag) tb.sendAttributeBool("state", emergencyFlag);
+  else tb.sendAttributeBool("state", emergencyFlag);
+  if (cont==100) {cont = 0;}  
 }
