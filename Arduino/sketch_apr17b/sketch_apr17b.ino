@@ -6,7 +6,7 @@
 EthernetClient ethernetClient;
 PubSubClient mqttClient(ethernetClient);
 
-byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02};
+byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03};
 
 // ****************************** ThingsBoard login details ******************************
 const char* server = "172.16.1.254";           // MQTT Broker (i.e. server)
@@ -55,6 +55,7 @@ void setup()
   mqttClient.setServer(server, port); // Configure the server adress and port.
   mqttClient.setCallback(on_message);
   mqttClient.subscribe("v1/devices/me/rpc/response/+");
+  create_JSON_Data_Rx(); // Set up the data to be published
 }
 
 void loop() 
@@ -144,7 +145,6 @@ void send_data(void)
 
 void recive_data(void)
 {
-  create_JSON_Data_Rx(); // Set up the data to be published
   mqttClient.publish("v1/devices/me/rpc/request/1",JSON_Data_Rx);
 }
 
@@ -172,14 +172,17 @@ void create_JSON_Data_Rx(void)
   JSON_Object.printTo(JSON_Data_Rx); // Store the data on global variable
 }
 
-void on_message(const char* topic, byte* payload, unsigned int length) {
-
-  //Serial.println("On message");
-
+void on_message(const char* topic, byte* payload, unsigned int length) 
+{
+  StaticJsonBuffer<200> jsonBuffer;
   char json[length + 1];
   strncpy (json, (char*)payload, length);
   json[length] = '\0';
 
   Serial.print("Message: ");
   Serial.println(json);
+
+  JsonObject& root = jsonBuffer.parseObject(json);
+  long time = root["params"];
+  Serial.println(time);
 }
