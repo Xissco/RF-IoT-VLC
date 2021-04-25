@@ -2,8 +2,11 @@
 #include <Ethernet.h>
 #include <EthernetUdp.h>
 
-byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02}; 
-unsigned int localPort = 8001;
+byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03}; 
+char IPsemaforo[] = "172.16.1.253"; 
+int puertoSemaforo = 8001;
+unsigned int localPort = 8002;
+byte emergencyFlag = 0;
 
 EthernetUDP Udp;
 
@@ -36,17 +39,13 @@ void setup()
 
 void loop()
 {
-  int packetSize = Udp.parsePacket();
-  if (packetSize)
-  {
-    byte data2 = UDPReceivePacket();
-    Serial.println(data2);
-  }
+  UDPSendPacket (emergencyFlag, IPsemaforo, puertoSemaforo);
+  delay(1000);
 }
-  byte UDPReceivePacket()
-  {
-    byte bufferRead [1]; 
-    Udp.read(bufferRead,1);
-    byte data = bufferRead[0];
-    return data;    
-  }
+
+void UDPSendPacket(byte data, char remote_IP[], int remote_port)
+{
+  Udp.beginPacket(remote_IP, remote_port);
+  Udp.write(data);
+  Udp.endPacket();    
+}
