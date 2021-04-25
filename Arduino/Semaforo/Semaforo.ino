@@ -12,6 +12,10 @@ byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02};
 unsigned int localPort = 8001;
 int packetSize;
 byte emergencyFlag = 0;
+byte redFlag = 0;
+byte yellowFlag = 0;
+byte greenFlag = 0;
+byte tlState = 0;
 char JSON_Data_Tx[100];
 unsigned long previousMillis = 0;
 long interval = 1*1000; 
@@ -72,8 +76,11 @@ void loop()
       emergencyFlag = UDPReceivePacket();
       Serial.println(emergencyFlag);
     }
+    tlState++;
+    trafficLightState(tlState);
     create_JSON_Data_Tx(); // Set up the data to be published
     mqttClient.publish(topicToPublish_ATTRIBUTES, JSON_Data_Tx);
+    if(tlState>=3) tlState = 0;
  }
   mqttClient.loop();    
 }
@@ -121,13 +128,38 @@ byte UDPReceivePacket()
     return data;    
 }
 
+void trafficLightState(int state)
+{
+  if (state==1)
+  {
+    redFlag = 1;
+    yellowFlag = 0;
+    greenFlag = 0;  
+  }
+  else if (state==2)
+  {
+    redFlag = 1;
+    yellowFlag = 1;
+    greenFlag = 0;  
+  }
+  else if (state==3)
+  {
+    redFlag = 0;
+    yellowFlag = 0;
+    greenFlag = 1;  
+  }
+}
+
 void create_JSON_Data_Tx(void)
 {
   StaticJsonBuffer<200> JSON_Buffer; // Allocate JSON buffer with 200-byte pool
   JsonObject& JSON_Object = JSON_Buffer.createObject(); // Create JSON object (i.e. document)
   
   // Now populate the JSON document with data
-  JSON_Object["state"] = emergencyFlag; // Create JSON object named "Temperature", assigned with our temperature data
+  JSON_Object["state"] = emergencyFlag;
+  JSON_Object["red"] = redFlag;
+  JSON_Object["yellow"] = yellowFlag;
+  JSON_Object["green"] = greenFlag;
   
   JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
 }
