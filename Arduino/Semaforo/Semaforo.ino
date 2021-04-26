@@ -24,7 +24,7 @@ byte greenFlag2 = 0;
 byte tlState = 0;
 byte readFt = 0;
 byte contR = 0;
-char JSON_Data_Tx[100];
+char JSON_Data_Tx[150];
 unsigned long previousMillis = 0;
 long interval = 1*1000; 
 int cont = 0;
@@ -82,13 +82,14 @@ void loop()
     previousMillis = currentMillis; // reset the previous millis, so that it will continue to publish data.
     if(cont>=1  and cont <=60)
     {
+      if(emergencyFlag == 1) trafficLightState(3);
+      if(emergencyFlag == 2) trafficLightState(1);
       packetSize = Udp.parsePacket();
       if (packetSize)
       {
         emergencyFlag = UDPReceivePacket();
       }
       cont --;
-      trafficLightState(3);
       if(mqttFlag == 0) mqttFlag = 1;
       else mqttFlag = 0;
       create_JSON_Data_Tx(); // Set up the data to be published
@@ -123,7 +124,7 @@ void loop()
       if (packetSize)
       {
         emergencyFlag = UDPReceivePacket();
-        if(emergencyFlag==1) cont = 60;
+        if(emergencyFlag>=1) cont = 60;
       }
       tlState++;
       trafficLightState(tlState);
