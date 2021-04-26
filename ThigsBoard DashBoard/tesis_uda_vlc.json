@@ -1,0 +1,3619 @@
+{
+  "title": "Tesis UDA VLC",
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "e9cda1de-cd15-2f36-f970-7cfb26a94f03": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "MQTT"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "634c40f0-47cc-8f2d-c23a-fbe03d4a78e9"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e9cda1de-cd15-2f36-f970-7cfb26a94f03"
+      },
+      "6de50540-2320-380f-dc86-67b2a80bad01": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#af4c4c",
+            "valueAttribute": "red1",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6de50540-2320-380f-dc86-67b2a80bad01"
+      },
+      "dc6d011a-b2b1-e417-79b2-7311c3317276": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#ece00c",
+            "valueAttribute": "yellow1",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "dc6d011a-b2b1-e417-79b2-7311c3317276"
+      },
+      "7cacc226-e3f3-d01f-755b-eea20f6b1971": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#53af4c",
+            "valueAttribute": "green1",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "7cacc226-e3f3-d01f-755b-eea20f6b1971"
+      },
+      "6392c67d-92a9-f1fc-0d9a-c35390babf5b": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Infraestructura 1</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6392c67d-92a9-f1fc-0d9a-c35390babf5b"
+      },
+      "8b551eab-de06-3ee0-8b41-bcd3bd660184": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Semaforo Principal</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "8b551eab-de06-3ee0-8b41-bcd3bd660184"
+      },
+      "d720cc30-35e4-5316-c73a-1fdce9c035d2": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Infraestructura 2</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "d720cc30-35e4-5316-c73a-1fdce9c035d2"
+      },
+      "7993b2c1-de6f-e94c-40d5-a0d7806144b8": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Infraestructura 3</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "7993b2c1-de6f-e94c-40d5-a0d7806144b8"
+      },
+      "3f25f6a2-3b14-8946-9b20-a85391447f7e": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Infraestructura 4</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "3f25f6a2-3b14-8946-9b20-a85391447f7e"
+      },
+      "085e2094-53e6-700a-0280-ee072eb37b65": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Semaforo</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "085e2094-53e6-700a-0280-ee072eb37b65"
+      },
+      "03d166d5-ec9d-d92c-1085-b1a7ce052554": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Estado Calle 1</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "03d166d5-ec9d-d92c-1085-b1a7ce052554"
+      },
+      "e649e7a8-0a3e-a7b7-e519-ed21e684a71e": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "valueAttribute": "UDP",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "634c40f0-47cc-8f2d-c23a-fbe03d4a78e9"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e649e7a8-0a3e-a7b7-e519-ed21e684a71e"
+      },
+      "6a800ba4-5d07-f01e-09d8-a8b818606595": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>MQTT</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6a800ba4-5d07-f01e-09d8-a8b818606595"
+      },
+      "5b44e899-deed-eb4e-84ad-98e8ddf1baa0": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>UDP</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5b44e899-deed-eb4e-84ad-98e8ddf1baa0"
+      },
+      "bbf8594b-a14b-64a5-15f0-66a079bd443c": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "valueAttribute": "RF",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "634c40f0-47cc-8f2d-c23a-fbe03d4a78e9"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "bbf8594b-a14b-64a5-15f0-66a079bd443c"
+      },
+      "33c1cd40-62f7-ab49-1412-c1616da1fd1e": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>RF</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "33c1cd40-62f7-ab49-1412-c1616da1fd1e"
+      },
+      "e430ed2e-bf27-d08a-6568-1932a50812d2": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "valueAttribute": "VLC",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "634c40f0-47cc-8f2d-c23a-fbe03d4a78e9"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e430ed2e-bf27-d08a-6568-1932a50812d2"
+      },
+      "1a95f9fb-4479-28bb-7a35-9bf0598ab7ac": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#af4c4c",
+            "valueAttribute": "state",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "634c40f0-47cc-8f2d-c23a-fbe03d4a78e9"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "1a95f9fb-4479-28bb-7a35-9bf0598ab7ac"
+      },
+      "430cf655-69aa-8115-8689-47b8b0a5541a": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>VLC</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "430cf655-69aa-8115-8689-47b8b0a5541a"
+      },
+      "9326eeb7-0bdf-1c26-e22f-129b68692957": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Emergencia</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "9326eeb7-0bdf-1c26-e22f-129b68692957"
+      },
+      "9b5f663d-dcb3-28cb-4f2a-6167daaf74da": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "MQTT"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "ffe8018f-56f7-bccb-2374-cdba4c7940df"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "9b5f663d-dcb3-28cb-4f2a-6167daaf74da"
+      },
+      "4c8235b0-e8da-bdde-0792-8e2b8c791bfd": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "UDP"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "ffe8018f-56f7-bccb-2374-cdba4c7940df"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4c8235b0-e8da-bdde-0792-8e2b8c791bfd"
+      },
+      "b5a6cfc8-bdb7-b0ed-d1f2-775885213cac": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "VLC"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "ffe8018f-56f7-bccb-2374-cdba4c7940df"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "b5a6cfc8-bdb7-b0ed-d1f2-775885213cac"
+      },
+      "0f752602-6975-bbf0-ec9e-98841a346c6a": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "RF"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "ffe8018f-56f7-bccb-2374-cdba4c7940df"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0f752602-6975-bbf0-ec9e-98841a346c6a"
+      },
+      "51f79437-a3d2-08c8-0379-7dd4c25b7fce": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#af4c4c",
+            "valueAttribute": "state",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "ffe8018f-56f7-bccb-2374-cdba4c7940df"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "51f79437-a3d2-08c8-0379-7dd4c25b7fce"
+      },
+      "0c85eba0-7ae7-34fe-b719-19c90e90c8f6": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>MQTT</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "0c85eba0-7ae7-34fe-b719-19c90e90c8f6"
+      },
+      "7917433d-423c-39ff-ed98-240ecfd5ce3f": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>UDP</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "7917433d-423c-39ff-ed98-240ecfd5ce3f"
+      },
+      "77615564-d4d4-feba-31cb-6f40bcd5f10f": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>RF</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "77615564-d4d4-feba-31cb-6f40bcd5f10f"
+      },
+      "8c44ce8d-557b-461b-8e7b-0bda2baa6e1f": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>VLC</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "8c44ce8d-557b-461b-8e7b-0bda2baa6e1f"
+      },
+      "6ccbaa72-62f5-c6b3-7d38-7d552e72f3d3": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Emergencia</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6ccbaa72-62f5-c6b3-7d38-7d552e72f3d3"
+      },
+      "f1f15b90-dc79-4baa-99e3-23c6cf864e70": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "MQTT"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "cb2e7935-058a-1ff5-4ba3-57eebc1ffd0a"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "f1f15b90-dc79-4baa-99e3-23c6cf864e70"
+      },
+      "6c084874-cc04-0483-5eed-13ecfb6a9ca1": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "UDP"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "cb2e7935-058a-1ff5-4ba3-57eebc1ffd0a"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6c084874-cc04-0483-5eed-13ecfb6a9ca1"
+      },
+      "9a63709e-af03-8066-c5d4-11063204dec6": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "RF"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "cb2e7935-058a-1ff5-4ba3-57eebc1ffd0a"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "9a63709e-af03-8066-c5d4-11063204dec6"
+      },
+      "6dc43b60-7903-8e69-12c2-0a50a574ff7c": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "VLC"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "cb2e7935-058a-1ff5-4ba3-57eebc1ffd0a"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6dc43b60-7903-8e69-12c2-0a50a574ff7c"
+      },
+      "4d381c36-8249-9c90-66be-2d24ef797d77": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#af4c4c",
+            "valueAttribute": "state",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "cb2e7935-058a-1ff5-4ba3-57eebc1ffd0a"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4d381c36-8249-9c90-66be-2d24ef797d77"
+      },
+      "ccab3abe-5ffe-761c-ea52-52d4c569b56e": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#af4c4c",
+            "valueAttribute": "state",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "005e43ff-e1eb-2138-b3cf-8cf21e8a1aa5"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "ccab3abe-5ffe-761c-ea52-52d4c569b56e"
+      },
+      "87de1093-ceba-187e-ca2b-57e329e554b6": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#af4c4c",
+            "valueAttribute": "state",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "87de1093-ceba-187e-ca2b-57e329e554b6"
+      },
+      "f60c5136-dd8f-882b-e089-dea54c0e9931": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "MQTT"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "005e43ff-e1eb-2138-b3cf-8cf21e8a1aa5"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "f60c5136-dd8f-882b-e089-dea54c0e9931"
+      },
+      "041c4799-de13-ae66-7125-20649b3f3ec6": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "UDP"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "005e43ff-e1eb-2138-b3cf-8cf21e8a1aa5"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "041c4799-de13-ae66-7125-20649b3f3ec6"
+      },
+      "1ea3d941-18e1-a768-c934-27df0985c31d": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "RF"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "005e43ff-e1eb-2138-b3cf-8cf21e8a1aa5"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "1ea3d941-18e1-a768-c934-27df0985c31d"
+      },
+      "15e682ba-90f3-1285-02e9-6bcead794aa8": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "VLC"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "005e43ff-e1eb-2138-b3cf-8cf21e8a1aa5"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "15e682ba-90f3-1285-02e9-6bcead794aa8"
+      },
+      "5dff635a-2162-3be0-3c0c-70f142fdf68a": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "MQTT"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5dff635a-2162-3be0-3c0c-70f142fdf68a"
+      },
+      "31ec8fe9-ed7b-0a5a-0927-927c890668a9": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "UDP"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "31ec8fe9-ed7b-0a5a-0927-927c890668a9"
+      },
+      "e57f4bd2-2b9b-e572-532f-52c6a39db3ae": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "RF"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "e57f4bd2-2b9b-e572-532f-52c6a39db3ae"
+      },
+      "6404ebd6-098e-2f42-0c85-3210d5b2f607": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0,0,0,0)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#71af4c",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus",
+            "valueAttribute": "VLC"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6404ebd6-098e-2f42-0c85-3210d5b2f607"
+      },
+      "3c9ccd72-63f1-1264-1635-8b835a964d2a": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>MQTT</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "3c9ccd72-63f1-1264-1635-8b835a964d2a"
+      },
+      "b4056f26-27a2-bfbf-ff0a-08137bf35aef": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>UDP</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "b4056f26-27a2-bfbf-ff0a-08137bf35aef"
+      },
+      "b199c5fe-802d-d656-04b7-fdad3bead2cc": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>RF</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "b199c5fe-802d-d656-04b7-fdad3bead2cc"
+      },
+      "6e764ef2-714b-1785-8cf6-99157de81417": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>VLC</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6e764ef2-714b-1785-8cf6-99157de81417"
+      },
+      "bd6ee5b3-c839-d322-10a5-caacc43a5b11": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Emergencia</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "bd6ee5b3-c839-d322-10a5-caacc43a5b11"
+      },
+      "181c4d8b-b60b-43df-f939-b533854d0b65": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Emergencia</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "181c4d8b-b60b-43df-f939-b533854d0b65"
+      },
+      "26edd872-0ff2-bd3c-2a73-69f744d51c3d": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Emergencia</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "26edd872-0ff2-bd3c-2a73-69f744d51c3d"
+      },
+      "966d8410-afde-1d86-c00d-501ce7ea52ef": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>VLC</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "966d8410-afde-1d86-c00d-501ce7ea52ef"
+      },
+      "6adcecdd-3ed8-6c58-1262-07803cb03064": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>VLC</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "6adcecdd-3ed8-6c58-1262-07803cb03064"
+      },
+      "4f327cdc-4d3b-3c7e-b4c0-731ee31c58b2": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>RF</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4f327cdc-4d3b-3c7e-b4c0-731ee31c58b2"
+      },
+      "45ff09e3-14c1-821d-2eee-ae00f8864eec": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>RF</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "45ff09e3-14c1-821d-2eee-ae00f8864eec"
+      },
+      "b3e685d7-de35-eb19-13c6-a499c21fb4dc": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>UDP</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "b3e685d7-de35-eb19-13c6-a499c21fb4dc"
+      },
+      "934d399b-0c29-9c0f-de7f-960aee1c3970": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>UDP</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "934d399b-0c29-9c0f-de7f-960aee1c3970"
+      },
+      "615f35d8-44d3-8d02-396c-2c463737d822": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>MQTT</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "615f35d8-44d3-8d02-396c-2c463737d822"
+      },
+      "90bf53e5-7ac9-6247-5c29-0cd291f99673": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>MQTT</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: right;\n    justify-content: right;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "90bf53e5-7ac9-6247-5c29-0cd291f99673"
+      },
+      "42d46f66-9ba5-9e96-f4c4-a5b053168611": {
+        "isSystemType": true,
+        "bundleAlias": "digital_gauges",
+        "typeAlias": "horizontal_bar_justgage",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "72662cc8-459b-a18d-0d05-bf1ee21252db",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "contador",
+                  "type": "attribute",
+                  "label": "contador",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.9302138938929763
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "maxValue": 60,
+            "minValue": 0,
+            "donutStartAngle": 90,
+            "showValue": true,
+            "showMinMax": true,
+            "gaugeWidthScale": 0.75,
+            "levelColors": [],
+            "titleFont": {
+              "family": "Roboto",
+              "size": 12,
+              "style": "normal",
+              "weight": "500",
+              "color": "#999999"
+            },
+            "labelFont": {
+              "family": "Roboto",
+              "size": 8,
+              "style": "normal",
+              "weight": "500"
+            },
+            "valueFont": {
+              "family": "Roboto",
+              "style": "normal",
+              "weight": "500",
+              "size": 10,
+              "color": "#666666"
+            },
+            "minMaxFont": {
+              "family": "Roboto",
+              "size": 12,
+              "style": "normal",
+              "weight": "500",
+              "color": "#666666"
+            },
+            "neonGlowBrightness": 0,
+            "dashThickness": 0,
+            "gaugeColor": "#eeeeee",
+            "showTitle": false,
+            "gaugeType": "horizontalBar",
+            "timestampFormat": "yyyy-MM-dd HH:mm:ss",
+            "animation": true,
+            "animationDuration": 500,
+            "animationRule": "linear"
+          },
+          "title": "New Horizontal bar",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "widgetStyle": {},
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "42d46f66-9ba5-9e96-f4c4-a5b053168611"
+      },
+      "33cad20f-2a7e-8d13-482c-4969dcf6764e": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#af4c4c",
+            "valueAttribute": "red2",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "33cad20f-2a7e-8d13-482c-4969dcf6764e"
+      },
+      "2b9469ea-6d28-6d04-f354-0b941e7e1f7c": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#ece00c",
+            "valueAttribute": "yellow2",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "New Led indicator",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "2b9469ea-6d28-6d04-f354-0b941e7e1f7c"
+      },
+      "71cff36b-78ef-4376-7d03-68ecf31293db": {
+        "isSystemType": true,
+        "bundleAlias": "control_widgets",
+        "typeAlias": "led_indicator",
+        "type": "rpc",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 2.5,
+        "sizeY": 2.5,
+        "config": {
+          "targetDeviceAliases": [],
+          "showTitle": false,
+          "backgroundColor": "rgba(230,231,232,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "0px",
+          "settings": {
+            "requestTimeout": 500,
+            "initialValue": true,
+            "ledColor": "#53af4c",
+            "valueAttribute": "green2",
+            "retrieveValueMethod": "attribute",
+            "parseValueFunction": "return data ? true : false;",
+            "performCheckStatus": false,
+            "checkStatusMethod": "checkStatus"
+          },
+          "title": "",
+          "dropShadow": false,
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "actions": {},
+          "decimals": 2,
+          "datasources": [],
+          "targetDeviceAliasIds": [
+            "72662cc8-459b-a18d-0d05-bf1ee21252db"
+          ],
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": ""
+        },
+        "row": 0,
+        "col": 0,
+        "id": "71cff36b-78ef-4376-7d03-68ecf31293db"
+      },
+      "5688d2a7-08b7-a434-fe48-14df47575d1e": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "html_card",
+        "type": "static",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7.5,
+        "sizeY": 3,
+        "config": {
+          "datasources": [],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "rgba(255,255,255,0)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "cardHtml": "<div class='card'>Semaforo Secundario</div>",
+            "cardCss": ".card {\n    font-weight: bold;\n    font-size: 18px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+          },
+          "title": "New HTML Card",
+          "dropShadow": false,
+          "showTitleIcon": false,
+          "iconColor": "rgba(0, 0, 0, 0.87)",
+          "iconSize": "24px",
+          "titleTooltip": "",
+          "enableFullscreen": false,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "5688d2a7-08b7-a434-fe48-14df47575d1e"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Tesis UDA VLC",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "e9cda1de-cd15-2f36-f970-7cfb26a94f03": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 2,
+                "col": 0
+              },
+              "6de50540-2320-380f-dc86-67b2a80bad01": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 8,
+                "col": 0
+              },
+              "dc6d011a-b2b1-e417-79b2-7311c3317276": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 8,
+                "col": 2
+              },
+              "7cacc226-e3f3-d01f-755b-eea20f6b1971": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 8,
+                "col": 4
+              },
+              "6392c67d-92a9-f1fc-0d9a-c35390babf5b": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "row": 1,
+                "col": 0
+              },
+              "8b551eab-de06-3ee0-8b41-bcd3bd660184": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 7,
+                "col": 0
+              },
+              "d720cc30-35e4-5316-c73a-1fdce9c035d2": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "row": 1,
+                "col": 4
+              },
+              "7993b2c1-de6f-e94c-40d5-a0d7806144b8": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "row": 1,
+                "col": 8
+              },
+              "3f25f6a2-3b14-8946-9b20-a85391447f7e": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "row": 1,
+                "col": 12
+              },
+              "085e2094-53e6-700a-0280-ee072eb37b65": {
+                "sizeX": 4,
+                "sizeY": 1,
+                "row": 1,
+                "col": 16
+              },
+              "03d166d5-ec9d-d92c-1085-b1a7ce052554": {
+                "sizeX": 20,
+                "sizeY": 1,
+                "row": 0,
+                "col": 0
+              },
+              "e649e7a8-0a3e-a7b7-e519-ed21e684a71e": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 3,
+                "col": 0
+              },
+              "6a800ba4-5d07-f01e-09d8-a8b818606595": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 2,
+                "col": 1
+              },
+              "5b44e899-deed-eb4e-84ad-98e8ddf1baa0": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 3,
+                "col": 1
+              },
+              "bbf8594b-a14b-64a5-15f0-66a079bd443c": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 4,
+                "col": 0
+              },
+              "33c1cd40-62f7-ab49-1412-c1616da1fd1e": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 4,
+                "col": 1
+              },
+              "e430ed2e-bf27-d08a-6568-1932a50812d2": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 5,
+                "col": 0
+              },
+              "1a95f9fb-4479-28bb-7a35-9bf0598ab7ac": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 6,
+                "col": 0
+              },
+              "430cf655-69aa-8115-8689-47b8b0a5541a": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 5,
+                "col": 1
+              },
+              "9326eeb7-0bdf-1c26-e22f-129b68692957": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 6,
+                "col": 1
+              },
+              "9b5f663d-dcb3-28cb-4f2a-6167daaf74da": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 2,
+                "col": 4
+              },
+              "4c8235b0-e8da-bdde-0792-8e2b8c791bfd": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 3,
+                "col": 4
+              },
+              "b5a6cfc8-bdb7-b0ed-d1f2-775885213cac": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 5,
+                "col": 4
+              },
+              "0f752602-6975-bbf0-ec9e-98841a346c6a": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 4,
+                "col": 4
+              },
+              "51f79437-a3d2-08c8-0379-7dd4c25b7fce": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 6,
+                "col": 4
+              },
+              "0c85eba0-7ae7-34fe-b719-19c90e90c8f6": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 2,
+                "col": 5
+              },
+              "7917433d-423c-39ff-ed98-240ecfd5ce3f": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 3,
+                "col": 5
+              },
+              "77615564-d4d4-feba-31cb-6f40bcd5f10f": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 4,
+                "col": 5
+              },
+              "8c44ce8d-557b-461b-8e7b-0bda2baa6e1f": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 5,
+                "col": 5
+              },
+              "6ccbaa72-62f5-c6b3-7d38-7d552e72f3d3": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 6,
+                "col": 5
+              },
+              "f1f15b90-dc79-4baa-99e3-23c6cf864e70": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 2,
+                "col": 8
+              },
+              "6c084874-cc04-0483-5eed-13ecfb6a9ca1": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 3,
+                "col": 8
+              },
+              "9a63709e-af03-8066-c5d4-11063204dec6": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 4,
+                "col": 8
+              },
+              "6dc43b60-7903-8e69-12c2-0a50a574ff7c": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 5,
+                "col": 8
+              },
+              "4d381c36-8249-9c90-66be-2d24ef797d77": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 6,
+                "col": 8
+              },
+              "ccab3abe-5ffe-761c-ea52-52d4c569b56e": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 6,
+                "col": 12
+              },
+              "87de1093-ceba-187e-ca2b-57e329e554b6": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 6,
+                "col": 17
+              },
+              "f60c5136-dd8f-882b-e089-dea54c0e9931": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 2,
+                "col": 12
+              },
+              "041c4799-de13-ae66-7125-20649b3f3ec6": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 3,
+                "col": 12
+              },
+              "1ea3d941-18e1-a768-c934-27df0985c31d": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 4,
+                "col": 12
+              },
+              "15e682ba-90f3-1285-02e9-6bcead794aa8": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 5,
+                "col": 12
+              },
+              "5dff635a-2162-3be0-3c0c-70f142fdf68a": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 2,
+                "col": 17
+              },
+              "31ec8fe9-ed7b-0a5a-0927-927c890668a9": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 3,
+                "col": 17
+              },
+              "e57f4bd2-2b9b-e572-532f-52c6a39db3ae": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 4,
+                "col": 17
+              },
+              "6404ebd6-098e-2f42-0c85-3210d5b2f607": {
+                "sizeX": 1,
+                "sizeY": 1,
+                "row": 5,
+                "col": 17
+              },
+              "3c9ccd72-63f1-1264-1635-8b835a964d2a": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 2,
+                "col": 9
+              },
+              "b4056f26-27a2-bfbf-ff0a-08137bf35aef": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 3,
+                "col": 9
+              },
+              "b199c5fe-802d-d656-04b7-fdad3bead2cc": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 4,
+                "col": 9
+              },
+              "6e764ef2-714b-1785-8cf6-99157de81417": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 5,
+                "col": 9
+              },
+              "bd6ee5b3-c839-d322-10a5-caacc43a5b11": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 6,
+                "col": 9
+              },
+              "181c4d8b-b60b-43df-f939-b533854d0b65": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 6,
+                "col": 13
+              },
+              "26edd872-0ff2-bd3c-2a73-69f744d51c3d": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 6,
+                "col": 18
+              },
+              "966d8410-afde-1d86-c00d-501ce7ea52ef": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 5,
+                "col": 13
+              },
+              "6adcecdd-3ed8-6c58-1262-07803cb03064": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 5,
+                "col": 18
+              },
+              "4f327cdc-4d3b-3c7e-b4c0-731ee31c58b2": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 4,
+                "col": 13
+              },
+              "45ff09e3-14c1-821d-2eee-ae00f8864eec": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 4,
+                "col": 18
+              },
+              "b3e685d7-de35-eb19-13c6-a499c21fb4dc": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 3,
+                "col": 13
+              },
+              "934d399b-0c29-9c0f-de7f-960aee1c3970": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 3,
+                "col": 18
+              },
+              "615f35d8-44d3-8d02-396c-2c463737d822": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 2,
+                "col": 13
+              },
+              "90bf53e5-7ac9-6247-5c29-0cd291f99673": {
+                "sizeX": 3,
+                "sizeY": 1,
+                "row": 2,
+                "col": 18
+              },
+              "42d46f66-9ba5-9e96-f4c4-a5b053168611": {
+                "sizeX": 13,
+                "sizeY": 2,
+                "row": 10,
+                "col": 0
+              },
+              "33cad20f-2a7e-8d13-482c-4969dcf6764e": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 8,
+                "col": 7
+              },
+              "2b9469ea-6d28-6d04-f354-0b941e7e1f7c": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 8,
+                "col": 9
+              },
+              "71cff36b-78ef-4376-7d03-68ecf31293db": {
+                "sizeX": 2,
+                "sizeY": 2,
+                "row": 8,
+                "col": 11
+              },
+              "5688d2a7-08b7-a434-fe48-14df47575d1e": {
+                "sizeX": 6,
+                "sizeY": 1,
+                "row": 7,
+                "col": 7
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "color": "rgba(0,0,0,0.870588)",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "634c40f0-47cc-8f2d-c23a-fbe03d4a78e9": {
+        "id": "634c40f0-47cc-8f2d-c23a-fbe03d4a78e9",
+        "alias": "Infraestructura 1",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "7ee9a390-a580-11eb-a6d9-cbabdb568b7b"
+          }
+        }
+      },
+      "72662cc8-459b-a18d-0d05-bf1ee21252db": {
+        "id": "72662cc8-459b-a18d-0d05-bf1ee21252db",
+        "alias": "Semaforo",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "5661b420-a581-11eb-a6d9-cbabdb568b7b"
+          }
+        }
+      },
+      "ffe8018f-56f7-bccb-2374-cdba4c7940df": {
+        "id": "ffe8018f-56f7-bccb-2374-cdba4c7940df",
+        "alias": "Infraestructura 2",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "f9b6b630-a580-11eb-a6d9-cbabdb568b7b"
+          }
+        }
+      },
+      "cb2e7935-058a-1ff5-4ba3-57eebc1ffd0a": {
+        "id": "cb2e7935-058a-1ff5-4ba3-57eebc1ffd0a",
+        "alias": "Infraestructura 3",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "36fb1180-a581-11eb-a6d9-cbabdb568b7b"
+          }
+        }
+      },
+      "005e43ff-e1eb-2138-b3cf-8cf21e8a1aa5": {
+        "id": "005e43ff-e1eb-2138-b3cf-8cf21e8a1aa5",
+        "alias": "Infraestructura 4",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "454e3690-a581-11eb-a6d9-cbabdb568b7b"
+          }
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1619234721596,
+          "endTimeMs": 1619321121596
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "name": "Tesis UDA VLC"
+}
