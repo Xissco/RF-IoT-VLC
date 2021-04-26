@@ -15,9 +15,12 @@ byte mqttFlag = 0;
 byte RFFlag = 0;
 byte VLCFlag = 0;
 byte emergencyFlag = 0;
-byte redFlag = 0;
-byte yellowFlag = 0;
-byte greenFlag = 0;
+byte redFlag1 = 0;
+byte yellowFlag1 = 0;
+byte greenFlag1 = 0;
+byte redFlag2 = 0;
+byte yellowFlag2 = 0;
+byte greenFlag2 = 0;
 byte tlState = 0;
 byte readFt = 0;
 byte contR = 0;
@@ -30,7 +33,7 @@ int cont = 0;
 const char* server = "172.16.1.254";           // MQTT Broker (i.e. server)
 const int port = 1883;                         // Default MQTT port
  
-const char* client_id = "Infraestructura 1";   // Can be anything
+const char* client_id = "Semaforo";   // Can be anything
 const char* username =  "LodxRSnCktZNrFKLhKm7";   // Authentication token here
 
 const char* topicToPublish_DATA = "v1/devices/me/telemetry"; // Topic address to publish to for sending data. 
@@ -71,7 +74,8 @@ void loop()
 
   if (!mqttClient.connected())
   {
-    if (mqttClient.connect(client_id, username, NULL)) Serial.println("Cliente mqtt no conectado");
+    Serial.println("Cliente mqtt no conectado");
+    mqttClient.connect(client_id, username, NULL); 
   }
   if(currentMillis - previousMillis > interval) 
   {
@@ -127,7 +131,7 @@ void loop()
       else mqttFlag = 0;
       create_JSON_Data_Tx(); // Set up the data to be published
       mqttClient.publish(topicToPublish_ATTRIBUTES, JSON_Data_Tx);
-      if(tlState>=3) tlState = 0;
+      if(tlState>=4) tlState = 0;
     }
  }
   mqttClient.loop();    
@@ -180,21 +184,43 @@ void trafficLightState(int state)
 {
   if (state==1)
   {
-    redFlag = 1;
-    yellowFlag = 0;
-    greenFlag = 0;  
+    redFlag1 = 1;
+    yellowFlag1 = 0;
+    greenFlag1 = 0;
+    
+    redFlag2 = 0;
+    yellowFlag2 = 0;
+    greenFlag2 = 1;  
   }
   else if (state==2)
   {
-    redFlag = 1;
-    yellowFlag = 1;
-    greenFlag = 0;  
+    redFlag1 = 1;
+    yellowFlag1 = 1;
+    greenFlag1 = 0;
+
+    redFlag2 = 0;
+    yellowFlag2 = 0;
+    greenFlag2 = 1;    
   }
   else if (state==3)
   {
-    redFlag = 0;
-    yellowFlag = 0;
-    greenFlag = 1;  
+    redFlag1 = 0;
+    yellowFlag1 = 0;
+    greenFlag1 = 1; 
+
+    redFlag2 = 1;
+    yellowFlag2 = 0;
+    greenFlag2 = 0; 
+  }
+  else if (state==4)
+  {
+    redFlag1 = 0;
+    yellowFlag1 = 0;
+    greenFlag1 = 1; 
+
+    redFlag2 = 1;
+    yellowFlag2 = 1;
+    greenFlag2 = 0; 
   }
 }
 
@@ -208,9 +234,12 @@ void create_JSON_Data_Tx(void)
   JSON_Object["RF"] = RFFlag;
   JSON_Object["VLC"] = VLCFlag;
   JSON_Object["state"] = emergencyFlag;
-  JSON_Object["red"] = redFlag;
-  JSON_Object["yellow"] = yellowFlag;
-  JSON_Object["green"] = greenFlag;
+  JSON_Object["red1"] = redFlag1;
+  JSON_Object["yellow1"] = yellowFlag1;
+  JSON_Object["green1"] = greenFlag1;
+  JSON_Object["red2"] = redFlag2;
+  JSON_Object["yellow2"] = yellowFlag2;
+  JSON_Object["green2"] = greenFlag2;
   JSON_Object["contador"] = cont;
   
   JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
