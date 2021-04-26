@@ -12,6 +12,9 @@ byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03};
 char IPsemaforo[] = "172.16.1.253"; 
 int puertoSemaforo = 8001;
 unsigned int localPort = 8002;
+byte mqttFlag = 0;
+byte RFFlag = 0;
+byte VLCFlag = 0;
 byte emergencyFlag = 0;
 char JSON_Data_Tx[100];
 unsigned long previousMillis = 0;
@@ -68,11 +71,11 @@ void loop()
   if(currentMillis - previousMillis > interval) 
   {
     previousMillis = currentMillis; // reset the previous millis, so that it will continue to publish data.
-    UDPSendPacket (emergencyFlag, IPsemaforo, puertoSemaforo);
+    UDPSendPacket(emergencyFlag, IPsemaforo, puertoSemaforo);
     create_JSON_Data_Tx(); // Set up the data to be published
     mqttClient.publish(topicToPublish_ATTRIBUTES, JSON_Data_Tx);
-    if(emergencyFlag == 0) emergencyFlag = 1;
-    else emergencyFlag = 0;
+    if(mqttFlag == 0) mqttFlag = 1;
+    else mqttFlag = 0;
   }
   mqttClient.loop();
 }
@@ -115,8 +118,8 @@ void renovarDHCP()
 void UDPSendPacket(byte data, char remote_IP[], int remote_port)
 {
   Udp.beginPacket(remote_IP, remote_port);
-  Udp.write(data);
-  Udp.endPacket();    
+  Serial.println(Udp.write(data));
+  Udp.endPacket();  
 }
 
 void create_JSON_Data_Tx(void)
@@ -125,6 +128,9 @@ void create_JSON_Data_Tx(void)
   JsonObject& JSON_Object = JSON_Buffer.createObject(); // Create JSON object (i.e. document)
   
   // Now populate the JSON document with data
+  JSON_Object["MQTT"] = mqttFlag;
+  JSON_Object["RF"] = RFFlag;
+  JSON_Object["VLC"] = VLCFlag;
   JSON_Object["state"] = emergencyFlag; // Create JSON object named "Temperature", assigned with our temperature data
   
   JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
