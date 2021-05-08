@@ -12,8 +12,6 @@ byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02};
 unsigned int localPort = 8001;
 int packetSize;
 byte mqttFlag = 0;
-byte RFFlag = 0;
-byte VLCFlag = 0;
 byte emergencyFlag = 0;
 byte redFlag1 = 0;
 byte yellowFlag1 = 0;
@@ -22,6 +20,8 @@ byte redFlag2 = 0;
 byte yellowFlag2 = 0;
 byte greenFlag2 = 0;
 byte tlState = 0;
+byte tlChange = 1;
+byte tlCount = 0;
 byte readFt = 0;
 byte contR = 0;
 char JSON_Data_Tx[150];
@@ -114,7 +114,8 @@ void loop()
       }
       else
       {
-        tlState = 0;
+        if(emergencyFlag == 1) trafficLightState(4);
+        if(emergencyFlag == 2) trafficLightState(2);
         contR = 0;
       }
     }
@@ -126,8 +127,12 @@ void loop()
         emergencyFlag = UDPReceivePacket();
         if(emergencyFlag>=1) cont = 60;
       }
-      tlState++;
-      trafficLightState(tlState);
+      tlCount++;
+      if(tlCount == tlChange)
+      {
+        tlState++;
+        trafficLightState(tlState);
+      }
       if(mqttFlag == 0) mqttFlag = 1;
       else mqttFlag = 0;
       create_JSON_Data_Tx(); // Set up the data to be published
@@ -191,7 +196,9 @@ void trafficLightState(int state)
     
     redFlag2 = 0;
     yellowFlag2 = 0;
-    greenFlag2 = 1;  
+    greenFlag2 = 1;
+    
+    tlChange = 5; 
   }
   else if (state==2)
   {
@@ -201,7 +208,9 @@ void trafficLightState(int state)
 
     redFlag2 = 0;
     yellowFlag2 = 0;
-    greenFlag2 = 1;    
+    greenFlag2 = 1;
+
+    tlChange = 2;    
   }
   else if (state==3)
   {
@@ -211,7 +220,9 @@ void trafficLightState(int state)
 
     redFlag2 = 1;
     yellowFlag2 = 0;
-    greenFlag2 = 0; 
+    greenFlag2 = 0;
+
+    tlChange = 5;
   }
   else if (state==4)
   {
@@ -221,8 +232,11 @@ void trafficLightState(int state)
 
     redFlag2 = 1;
     yellowFlag2 = 1;
-    greenFlag2 = 0; 
+    greenFlag2 = 0;
+
+    tlChange = 2;
   }
+  tlCount = 0;
 }
 
 void create_JSON_Data_Tx(void)
@@ -232,8 +246,6 @@ void create_JSON_Data_Tx(void)
   
   // Now populate the JSON document with data
   JSON_Object["MQTT"] = mqttFlag;
-  JSON_Object["RF"] = RFFlag;
-  JSON_Object["VLC"] = VLCFlag;
   JSON_Object["state"] = emergencyFlag;
   JSON_Object["red1"] = redFlag1;
   JSON_Object["yellow1"] = yellowFlag1;

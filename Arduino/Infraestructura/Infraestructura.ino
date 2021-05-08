@@ -9,7 +9,7 @@ PubSubClient mqttClient(ethernetClient);
 EthernetUDP Udp;
 
 byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03}; 
-char IPsemaforo[] = "172.16.1.253"; 
+char IPsemaforo[] = "172.16.1.255"; 
 int puertoSemaforo = 8001;
 unsigned int localPort = 8002;
 byte mqttFlag = 0;
