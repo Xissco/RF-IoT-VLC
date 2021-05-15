@@ -4,6 +4,22 @@
 #include <PubSubClient.h>   
 #include <ArduinoJson.h>   
 
+#define verde1 2
+#define amarillo1 3
+#define rojo1 4
+//SEMAFORO 2
+#define verde2 5
+#define amarillo2 6
+#define rojo2 7
+//SEMAFORO 3
+#define verde3 8
+#define amarillo3 9
+#define rojo3 10
+//SEMAFORO 4
+#define verde4 11
+#define amarillo4 12
+#define rojo4 13
+
 EthernetClient ethernetClient;
 PubSubClient mqttClient(ethernetClient);
 EthernetUDP Udp;
@@ -42,7 +58,7 @@ const char* topicToPublish_ATTRIBUTES = "v1/devices/me/attributes"; // Topic add
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   while (!Serial) delay(2);
   Ethernet.init(10);
     
@@ -65,6 +81,10 @@ void setup()
   Serial.println(Ethernet.localIP());
   Udp.begin(localPort);
   mqttClient.setServer(server, port);
+  for(int pines=2; pines<=13; pines++)
+  {
+    pinMode(pines,OUTPUT);
+  }
 }
 
 void loop()
@@ -82,8 +102,14 @@ void loop()
     previousMillis = currentMillis; // reset the previous millis, so that it will continue to publish data.
     if(cont>=1  and cont <=60)
     {
-      if(emergencyFlag == 1) trafficLightState(3);
-      if(emergencyFlag == 2) trafficLightState(1);
+      if(emergencyFlag == 1) 
+      {
+        trafficLightState(3);
+      }
+      else if(emergencyFlag == 2)
+      {
+        trafficLightState(1);
+      }
       packetSize = Udp.parsePacket();
       if (packetSize)
       {
@@ -203,13 +229,13 @@ void trafficLightState(int state)
   else if (state==2)
   {
     redFlag1 = 1;
-    yellowFlag1 = 1;
-    greenFlag1 = 0;
+    yellowFlag1 = 0;
+    greenFlag1 = 0; 
 
     redFlag2 = 0;
-    yellowFlag2 = 0;
-    greenFlag2 = 1;
-
+    yellowFlag2 = 1;
+    greenFlag2 = 0;
+    
     tlChange = 2;    
   }
   else if (state==3)
@@ -221,18 +247,18 @@ void trafficLightState(int state)
     redFlag2 = 1;
     yellowFlag2 = 0;
     greenFlag2 = 0;
-
+    
     tlChange = 5;
   }
   else if (state==4)
   {
     redFlag1 = 0;
-    yellowFlag1 = 0;
-    greenFlag1 = 1; 
+    yellowFlag1 = 1;
+    greenFlag1 = 0;   
 
     redFlag2 = 1;
-    yellowFlag2 = 1;
-    greenFlag2 = 0;
+    yellowFlag2 = 0;
+    greenFlag2 = 0;         
 
     tlChange = 2;
   }
@@ -256,5 +282,21 @@ void create_JSON_Data_Tx(void)
   JSON_Object["contador"] = cont;
   
   JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
+
+  digitalWrite(rojo1,redFlag1);    
+  digitalWrite(amarillo1,yellowFlag1);
+  digitalWrite(verde1,greenFlag1);
+
+  digitalWrite(rojo3,redFlag1);    
+  digitalWrite(amarillo3,yellowFlag1);
+  digitalWrite(verde3,greenFlag1);
+    
+    digitalWrite(rojo2,redFlag2);    
+    digitalWrite(amarillo2,yellowFlag2);
+    digitalWrite(verde2,greenFlag2);
+
+    digitalWrite(rojo4,redFlag2);    
+    digitalWrite(amarillo4,yellowFlag2);
+    digitalWrite(verde4,greenFlag2); 
 }
   
