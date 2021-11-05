@@ -6,13 +6,14 @@
 #include <VirtualWire.h> //Libreria RF
 #include <SoftwareSerial.h> 
 
-SoftwareSerial mySerial(7,8); // RX, TX
+SoftwareSerial mySerial(6,7); // RX, TX
 EthernetClient ethernetClient;
 PubSubClient mqttClient(ethernetClient);
 EthernetUDP Udp;
 
+int packetSize;
 int rf;
-byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x03}; 
+byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x01}; 
 char IPsemaforo[] = "172.16.1.255"; 
 int puertoSemaforo = 8001;
 unsigned int localPort = 8002;
@@ -20,6 +21,9 @@ byte mqttFlag = 0;
 byte RFFlag = 0;
 byte VLCFlag = 0;
 byte emergencyFlag = 0;
+bool changeFlag = false;
+byte lastEmergencyFlag = 0;
+byte contUDP = 0;
 char JSON_Data_Tx[100];
 unsigned long previousMillis = 0;
 long interval = 1*1000; 
@@ -82,7 +86,30 @@ void loop()
     previousMillis = currentMillis; // reset the previous millis, so that it will continue to publish data.
     recibirdato();
     transmisorVLC1();
-    UDPSendPacket(emergencyFlag, IPsemaforo, puertoSemaforo);
+    if(changeFlag) 
+    {
+      UDPSendPacket(emergencyFlag, IPsemaforo, puertoSemaforo);
+      UDPSendPacket(emergencyFlag, "172.16.1.251", 8002);
+    }
+    contUDP++;
+    if (contUDP == 10)
+    {
+      UDPSendPacket(emergencyFlag, "172.16.1.253", puertoSemaforo);
+      contUDP = 0;
+    }
+    packetSize = Udp.parsePacket();
+    if (packetSize)
+    {
+      byte aux = UDPReceivePacket();
+      Serial.println(aux);
+      if(aux!=3)
+      {
+        emergencyFlag = VLCFlag = aux;
+        if (VLCFlag >= 1) transmisorVLC1();  
+      }
+      Serial.print("VLC: ");
+      Serial.println(aux);
+    }    
     create_JSON_Data_Tx(); // Set up the data to be published
     mqttClient.publish(topicToPublish_ATTRIBUTES, JSON_Data_Tx);
     if(mqttFlag == 0) mqttFlag = 1;
@@ -128,6 +155,7 @@ void renovarDHCP()
 
 void UDPSendPacket(byte data, char remote_IP[], int remote_port)
 {
+  Serial.println(data);
   Udp.beginPacket(remote_IP, remote_port);
   Udp.write(data);
   Udp.endPacket();  
@@ -142,45 +170,53 @@ void create_JSON_Data_Tx(void)
   JSON_Object["MQTT"] = mqttFlag;
   JSON_Object["RF"] = RFFlag;
   JSON_Object["VLC"] = VLCFlag;
-  JSON_Object["state"] = emergencyFlag; // Create JSON object named "Temperature", assigned with our temperature data
-  
+  JSON_Object["state"] = emergencyFlag;
   JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
 }
 
-void recibirdato(){  // Recibir el dato RF 
-    
-    uint8_t dato;
-    uint8_t datoleng=8;
-    //verificamos si hay un dato valido en el RF
-    if (vw_get_message(&dato,&datoleng))
+void recibirdato()
+{
+  uint8_t dato[8];
+  uint8_t datoleng=8;
+  //verificamos si hay un dato valido en el RF
+  if (vw_get_message((uint8_t *)dato,&datoleng))
+  {
+    if((char)dato[0]=='i')
     {
-        if((char)dato=='1')
-        {
-            digitalWrite(13, true); //LED on
-            rf=5;
-            emergencyFlag = 1;
-            RFFlag = 1;
-            Serial.print("Dato RF recibido: ");
-            Serial.println(rf);
-            Serial.println("Inicio VLC");
-            
-            
-        }
-        else if((char)dato=='2')
-        {
-            digitalWrite(13, false); //LED off
-             Serial.println("apagado");
-             rf=0;
-             emergencyFlag = 0;
-             RFFlag = 0;
-        }            
+      digitalWrite(13, true); //LED on
+      rf=5;
+      emergencyFlag = 1;
+      RFFlag = 1;
+      Serial.print("Dato RF recibido: ");
+      Serial.println(rf);
+      Serial.println("Inicio VLC");
     }
+    else if((char)dato[0]=='f')
+    {
+      digitalWrite(13, false); //LED off
+      Serial.println("apagado");
+      rf=0;
+      emergencyFlag = 0;
+      RFFlag = 0;
+    }
+    changeFlag = emergencyFlag != lastEmergencyFlag;
+    lastEmergencyFlag = emergencyFlag;            
+  }
 }
 
-void transmisorVLC1(){  //Transmision de Alerta VLC
-
-if (rf==5)
+byte UDPReceivePacket()
 {
+    byte bufferRead [1]; 
+    Udp.read(bufferRead,1);
+    byte data = bufferRead[0];
+    //Serial.println(data);
+    return data;    
+}
+
+void transmisorVLC1()
+{
+  if (rf==5 or VLCFlag>=1)
+  {
     mySerial.println("ALERTA AMBULANCIA"); //Tx VLC hacia Automovil
     VLCFlag = 1;
   }

@@ -24,7 +24,7 @@ EthernetClient ethernetClient;
 PubSubClient mqttClient(ethernetClient);
 EthernetUDP Udp;
 
-byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x02}; 
+byte mac[] = {0x00, 0xAA, 0xBB, 0xCC, 0xDE, 0x06}; 
 unsigned int localPort = 8001;
 int packetSize;
 byte mqttFlag = 0;
@@ -81,7 +81,7 @@ void setup()
   Serial.println(Ethernet.localIP());
   Udp.begin(localPort);
   mqttClient.setServer(server, port);
-  for(int pines=2; pines<=13; pines++)
+  for(int pines=2; pines<=9; pines++)
   {
     pinMode(pines,OUTPUT);
   }
@@ -120,20 +120,20 @@ void loop()
       else mqttFlag = 0;
       create_JSON_Data_Tx(); // Set up the data to be published
       mqttClient.publish(topicToPublish_ATTRIBUTES, JSON_Data_Tx);
-      if(cont==0)
+      /*if(cont==0)
       { 
         readFt = 3;
-        Udp.flush();
       }
       while(readFt >=1) 
       {
         packetSize = Udp.parsePacket();
-        if (packetSize) contR = contR + UDPReceivePacket();
+        //Serial.println(packetSize);
+        if (packetSize) contR = UDPReceivePacket();
         Serial.println(contR);
         readFt--;
         delay(500);
       }
-      if(contR > 0)
+      if(contR > 0 && cont==0)
       {
         cont = 60;
         contR = 0;
@@ -143,7 +143,7 @@ void loop()
         if(emergencyFlag == 1) trafficLightState(4);
         if(emergencyFlag == 2) trafficLightState(2);
         contR = 0;
-      }
+      }*/
     }
     else
     {
@@ -281,8 +281,6 @@ void create_JSON_Data_Tx(void)
   JSON_Object["green2"] = greenFlag2;
   JSON_Object["contador"] = cont;
   
-  JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
-
   digitalWrite(rojo1,redFlag1);    
   digitalWrite(amarillo1,yellowFlag1);
   digitalWrite(verde1,greenFlag1);
@@ -298,5 +296,7 @@ void create_JSON_Data_Tx(void)
     digitalWrite(rojo4,redFlag2);    
     digitalWrite(amarillo4,yellowFlag2);
     digitalWrite(verde4,greenFlag2); 
+
+    JSON_Object.printTo(JSON_Data_Tx); // Store the data on global variable
 }
   
